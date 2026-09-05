@@ -1,10 +1,3745 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Amrish Yadav</title>
+
+    <!-- =====================================================
+         BASIC SEO / WEBSITE INFORMATION
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Amrish Yadav | Agriculture Researcher & Agriculturist</title>
+
+    <meta name="description"
+          content="Official personal website of Amrish Yadav — agriculture student, researcher, agriculturist and science enthusiast from Nepal.">
+
+    <meta name="keywords"
+          content="Amrish Yadav, Agriculture, Researcher, Agriculturist, Nepal, Agricultural Research, Vegetable Farming">
+
+    <meta name="author" content="Amrish Yadav">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Amrish Yadav | Agriculture Researcher">
+
+    <meta property="og:description"
+          content="Explore the academic journey, research, projects and work of Amrish Yadav.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+          content="https://amrishyadav.com.np">
+
+    <!-- =====================================================
+         FAVICON
+         Later replace favicon.png with your own icon
+    ====================================================== -->
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        :root {
+
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #e8f5e9;
+
+            --text: #172117;
+            --text-light: #667066;
+
+            --background: #ffffff;
+            --background-alt: #f6f9f6;
+
+            --card: #ffffff;
+
+            --border: #e1e7e1;
+
+            --shadow:
+                0 15px 40px rgba(0,0,0,0.08);
+
+            --radius: 16px;
+
+            --max-width: 1180px;
+        }
+
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            color: var(--text);
+
+            background: var(--background);
+
+            line-height: 1.7;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            max-width: var(--max-width);
+
+            margin: auto;
+        }
+
+
+        section {
+
+            padding: 100px 0;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+
+        .section-heading .small-title {
+
+            color: var(--primary);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(32px, 5vw, 48px);
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-heading p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: var(--text-light);
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.92);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+
+        nav {
+
+            height: 76px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+
+        .logo span {
+
+            color: var(--primary);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--text-light);
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--primary);
+        }
+
+
+        .nav-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .theme-btn,
+        .menu-btn {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: 1px solid var(--border);
+
+            background: var(--background);
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            font-size: 17px;
+        }
+
+
+        .menu-btn {
+
+            display: none;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ====================================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 13px 22px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            background: var(--primary);
+
+            color: white;
+
+            border: 2px solid var(--primary);
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+
+        .btn:hover {
+
+            background: var(--primary-dark);
+
+            border-color: var(--primary-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--primary);
+        }
+
+
+        .btn-outline:hover {
+
+            color: white;
+
+            background: var(--primary);
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-top: 110px;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(46,125,50,0.12),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f7fbf7,
+                    #ffffff
+                );
+        }
+
+
+        .hero-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            background: var(--primary-light);
+
+            color: var(--primary-dark);
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 7vw, 78px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 span {
+
+            color: var(--primary);
+        }
+
+
+        .hero h2 {
+
+            font-size: clamp(19px, 3vw, 26px);
+
+            font-weight: 500;
+
+            color: var(--text-light);
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-description {
+
+            max-width: 650px;
+
+            color: var(--text-light);
+
+            font-size: 17px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .social-links a {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .social-links a:hover {
+
+            color: white;
+
+            background: var(--primary);
+
+            border-color: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        .hero-photo {
+
+            position: relative;
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .photo-frame {
+
+            width: min(390px, 80vw);
+
+            aspect-ratio: 1 / 1;
+
+            border-radius: 30px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #dcefdc,
+                    #f8fbf8
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            border: 10px solid white;
+
+            box-shadow: var(--shadow);
+
+            position: relative;
+        }
+
+
+        .photo-placeholder {
+
+            text-align: center;
+
+            color: var(--primary);
+
+            padding: 30px;
+        }
+
+
+        .photo-placeholder strong {
+
+            display: block;
+
+            font-size: 24px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .photo-placeholder span {
+
+            font-size: 13px;
+
+            color: var(--text-light);
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about {
+
+            background: var(--background-alt);
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .about-image {
+
+            min-height: 430px;
+
+            border-radius: var(--radius);
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #dcefdc,
+                    #f7faf7
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .about-content h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .about-content p {
+
+            color: var(--text-light);
+
+            margin-bottom: 18px;
+        }
+
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 15px;
+
+            margin: 30px 0;
+        }
+
+
+        .info-item {
+
+            padding: 18px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: var(--card);
+        }
+
+
+        .info-item small {
+
+            display: block;
+
+            color: var(--text-light);
+
+            font-size: 12px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .info-item strong {
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ====================================================== */
+
+        .timeline {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            position: relative;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 14px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--border);
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding-left: 55px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 5px;
+
+            top: 5px;
+
+            width: 20px;
+
+            height: 20px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            border: 5px solid var(--primary-light);
+        }
+
+
+        .timeline-year {
+
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+        }
+
+
+        .timeline-item h3 {
+
+            font-size: 22px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .timeline-item h4 {
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+
+        .timeline-item p {
+
+            color: var(--text-light);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           RESEARCH
+        ====================================================== */
+
+        .research {
+
+            background: var(--background-alt);
+        }
+
+
+        .featured-research {
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 45px;
+
+            box-shadow: var(--shadow);
+
+            margin-bottom: 35px;
+        }
+
+
+        .research-tag {
+
+            display: inline-block;
+
+            color: var(--primary);
+
+            background: var(--primary-light);
+
+            padding: 6px 12px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-research h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 31px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-research p {
+
+            color: var(--text-light);
+
+            margin-bottom: 25px;
+
+            max-width: 900px;
+        }
+
+
+        .research-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .research-meta span {
+
+            padding: 8px 13px;
+
+            background: var(--background-alt);
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            color: var(--text-light);
+        }
+
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .card-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--primary-light);
+
+            color: var(--primary);
+
+            border-radius: 10px;
+
+            margin-bottom: 20px;
+
+            font-size: 18px;
+
+            font-weight: 800;
+        }
+
+
+        .card h3 {
+
+            font-size: 19px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .text-link {
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ====================================================== */
+
+        .project-card {
+
+            overflow: hidden;
+
+            padding: 0;
+        }
+
+
+        .project-image {
+
+            height: 190px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #dcefdc,
+                    #f5f9f5
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--primary);
+
+            font-weight: 800;
+
+            font-size: 15px;
+        }
+
+
+        .project-content {
+
+            padding: 25px;
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ====================================================== */
+
+        .skills {
+
+            background: var(--background-alt);
+        }
+
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 30px;
+        }
+
+
+        .skill-box {
+
+            padding: 30px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+        }
+
+
+        .skill-box h3 {
+
+            margin-bottom: 22px;
+        }
+
+
+        .skill {
+
+            margin-bottom: 18px;
+        }
+
+
+        .skill-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 7px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .skill-bar {
+
+            height: 7px;
+
+            background: var(--border);
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+
+        .skill-progress {
+
+            height: 100%;
+
+            background: var(--primary);
+
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           BLOG
+        ====================================================== */
+
+        .blog-card {
+
+            overflow: hidden;
+
+            padding: 0;
+        }
+
+
+        .blog-image {
+
+            height: 190px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #e0f0e0,
+                    #f8faf8
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--primary);
+
+            font-weight: 700;
+        }
+
+
+        .blog-content {
+
+            padding: 25px;
+        }
+
+
+        .blog-date {
+
+            font-size: 11px;
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        .blog-content h3 {
+
+            margin: 10px 0;
+        }
+
+
+        /* =====================================================
+           ACHIEVEMENTS
+        ====================================================== */
+
+        .achievement {
+
+            text-align: center;
+        }
+
+
+        .achievement-number {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 43px;
+
+            color: var(--primary);
+
+            margin-bottom: 5px;
+        }
+
+
+        .achievement h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .achievement p {
+
+            color: var(--text-light);
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           GALLERY
+        ====================================================== */
+
+        .gallery {
+
+            background: var(--background-alt);
+        }
+
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 18px;
+        }
+
+
+        .gallery-item {
+
+            aspect-ratio: 1 / 0.75;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #dcefdc,
+                    #f7faf7
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .gallery-item:hover {
+
+            transform: scale(1.02);
+        }
+
+
+        /* =====================================================
+           CV
+        ====================================================== */
+
+        .cv-box {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #1b5e20,
+                    #2e7d32
+                );
+
+            color: white;
+
+            border-radius: 22px;
+
+            padding: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .cv-box h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .cv-box p {
+
+            opacity: 0.85;
+
+            max-width: 650px;
+        }
+
+
+        .cv-box .btn {
+
+            background: white;
+
+            color: var(--primary);
+
+            border-color: white;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        .contact {
+
+            background: var(--background-alt);
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
+            gap: 40px;
+        }
+
+
+        .contact-info {
+
+            padding: 35px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            background: var(--primary-light);
+
+            color: var(--primary);
+
+            border-radius: 9px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+        }
+
+
+        .contact-item small {
+
+            display: block;
+
+            color: var(--text-light);
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            font-weight: 700;
+        }
+
+
+        .contact-item strong {
+
+            font-size: 14px;
+        }
+
+
+        .contact-form {
+
+            padding: 35px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 15px;
+        }
+
+
+        .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            margin-bottom: 7px;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            font-family: inherit;
+
+            outline: none;
+        }
+
+
+        .form-group textarea {
+
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: var(--primary);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #111711;
+
+            color: white;
+
+            padding: 55px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.3fr
+                1fr
+                1fr;
+
+            gap: 50px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .footer-logo {
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-logo span {
+
+            color: #81c784;
+        }
+
+
+        footer p {
+
+            color: #a9b2a9;
+
+            font-size: 13px;
+        }
+
+
+        .footer-title {
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-links {
+
+            list-style: none;
+        }
+
+
+        .footer-links li {
+
+            margin-bottom: 8px;
+        }
+
+
+        .footer-links a {
+
+            color: #a9b2a9;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+
+        .footer-links a:hover {
+
+            color: white;
+        }
+
+
+        .footer-bottom {
+
+            padding-top: 25px;
+
+            border-top: 1px solid #293029;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* =====================================================
+           SCROLL PROGRESS
+        ====================================================== */
+
+        #progress-bar {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            height: 3px;
+
+            width: 0;
+
+            background: var(--primary);
+
+            z-index: 2000;
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+        #top-btn {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            color: white;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition: 0.3s;
+
+            z-index: 999;
+        }
+
+
+        #top-btn.show {
+
+            opacity: 1;
+
+            pointer-events: auto;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        body.dark {
+
+            --text: #edf4ed;
+
+            --text-light: #aab6aa;
+
+            --background: #101510;
+
+            --background-alt: #161d16;
+
+            --card: #1b231b;
+
+            --border: #2b372b;
+        }
+
+
+        body.dark header {
+
+            background: rgba(16,21,16,0.92);
+
+            border-color: var(--border);
+        }
+
+
+        body.dark .hero {
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(46,125,50,0.20),
+                    transparent 30%
+                ),
+
+                var(--background);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 76px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: var(--background);
+
+                border-bottom: 1px solid var(--border);
+
+                flex-direction: column;
+
+                padding: 25px;
+
+                gap: 20px;
+
+                transform: translateY(-150%);
+
+                transition: 0.3s;
+            }
+
+
+            .nav-links.active {
+
+                transform: translateY(0);
+            }
+
+
+            .menu-btn {
+
+                display: block;
+            }
+
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero {
+
+                text-align: center;
+            }
+
+
+            .hero-description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .hero-buttons,
+            .social-links {
+
+                justify-content: center;
+            }
+
+
+            .hero-photo {
+
+                order: -1;
+            }
+
+
+            .cards {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .cv-box {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+
+                padding: 75px 0;
+            }
+
+
+            .container {
+
+                width: 92%;
+            }
+
+
+            .hero {
+
+                padding-top: 120px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+
+            .cards,
+            .gallery-grid,
+            .info-grid,
+            .form-row {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .featured-research,
+            .contact-form,
+            .contact-info,
+            .cv-box {
+
+                padding: 25px;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-    <h1>Welcome to Amrish Yadav's Blog</h1>
-    <p>My website is working!</p>
+
+    <!-- =====================================================
+         SCROLL PROGRESS
+    ====================================================== -->
+
+    <div id="progress-bar"></div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <a href="#home" class="logo">
+                    Amrish<span>.</span>
+                </a>
+
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#education">Education</a></li>
+
+                    <li><a href="#research">Research</a></li>
+
+                    <li><a href="#projects">Projects</a></li>
+
+                    <li><a href="#blog">Blog</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+
+                <div class="nav-actions">
+
+                    <button
+                        class="theme-btn"
+                        id="themeBtn"
+                        title="Change theme">
+                        ☾
+                    </button>
+
+
+                    <button
+                        class="menu-btn"
+                        id="menuBtn"
+                        title="Open menu">
+                        ☰
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO / HOME
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+                    <div>
+
+                        <span class="hero-label">
+                            Agriculture • Research • Innovation
+                        </span>
+
+
+                        <h1>
+                            Hello, I'm
+                            <span>Amrish Yadav.</span>
+                        </h1>
+
+
+                        <h2>
+                            Agriculture Researcher & Agriculturist
+                        </h2>
+
+
+                        <p class="hero-description">
+
+                            Welcome to my personal website.
+
+                            I am passionate about agriculture,
+                            research, technology and creating
+                            meaningful solutions for farmers and
+                            rural communities.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a href="#research" class="btn">
+                                Explore My Research →
+                            </a>
+
+
+                            <a href="#contact"
+                               class="btn btn-outline">
+                                Get In Touch
+                            </a>
+
+                        </div>
+
+
+                        <!-- Replace # with your actual links -->
+
+                        <div class="social-links">
+
+                            <a href="#"
+                               title="Facebook">
+                                FB
+                            </a>
+
+                            <a href="#"
+                               title="Instagram">
+                                IG
+                            </a>
+
+                            <a href="#"
+                               title="LinkedIn">
+                                IN
+                            </a>
+
+                            <a href="#"
+                               title="GitHub">
+                                GH
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-photo">
+
+                        <div class="photo-frame">
+
+                            <!--
+                            LATER:
+                            Replace this entire div with:
+
+                            <img src="images/profile.jpg"
+                                 alt="Amrish Yadav">
+                            -->
+
+                            <img src="images/profile/PP%20amrish.jpg"
+     alt="Amrish Yadav">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+       <section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                About Me
+            </div>
+
+            <h2>
+                A little about my journey
+            </h2>
+
+            <p>
+                Agriculture, research, learning and innovation
+                are at the heart of my academic journey.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img src="images/profile/PP%20amrish.jpg"
+                     alt="Amrish Yadav"
+                     style="width:100%; height:100%; object-fit:cover;">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h3>
+                    Agriculture, Research & Impact
+                </h3>
+
+
+                <p>
+                    I am Amrish Yadav, an agriculture graduate and
+                    researcher from Nepal with a strong interest in
+                    agricultural research, vegetable production,
+                    technical efficiency, data analysis and
+                    sustainable agricultural development.
+                </p>
+
+
+                <p>
+                    My academic journey has given me the opportunity
+                    to work closely with farmers and understand
+                    real-world challenges in agricultural production.
+                    I am particularly interested in research that can
+                    contribute to evidence-based decision-making and
+                    improved agricultural development.
+                </p>
+
+
+                <p>
+                    My undergraduate research focused on the
+                    determinants of technical efficiency among
+                    vegetable farmers in Sarlahi District, using
+                    field-level data and Stochastic Frontier Analysis.
+                </p>
+
+
+                <div class="info-grid">
+
+                    <div class="info-item">
+
+                        <small>Name</small>
+
+                        <strong>
+                            Amrish Yadav
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>Profession</small>
+
+                        <strong>
+                            Agriculture Researcher & Agriculturist
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>Location</small>
+
+                        <strong>
+                            Nepal
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>Education</small>
+
+                        <strong>
+                            B.Sc. Agriculture
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>Email</small>
+
+                        <strong>
+                            yamrish654@gmail.com
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>Phone</small>
+
+                        <strong>
+                            9812969636
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <!-- =================================================
+     EDUCATION
+================================================== -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                Academic Journey
+            </div>
+
+            <h2>
+                Education
+            </h2>
+
+            <p>
+                My educational background and academic journey.
+            </p>
+
+        </div>
+
+        <div class="timeline">
+
+            <!-- B.Sc. Agriculture -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    B.Sc. Agriculture
+                </div>
+
+                <h3>
+                    Bachelor of Science in Agriculture
+                </h3>
+
+                <h4>
+                    College of Natural Resource Management,
+                    Tikapur, Sarlahi
+                </h4>
+
+                <p>
+                    Agriculture and Forestry University,
+                    Nepal.
+                </p>
+
+            </div>
+
+
+            <!-- +2 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    Higher Secondary Education (+2)
+                </div>
+
+                <h3>
+                    Higher Secondary Education
+                </h3>
+
+                <h4>
+                    Kalika Manavgyan Secondary School,
+                    Butwal
+                </h4>
+
+                <p>
+                    Completed +2 level education from
+                    Kalika Manavgyan Secondary School,
+                    Butwal.
+                </p>
+
+            </div>
+
+
+            <!-- SEE -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    Secondary Education Examination (SEE)
+                </div>
+
+                <h3>
+                    Secondary Education Examination
+                </h3>
+
+                <h4>
+                    Adarsh English Boarding Secondary School,
+                    Semari
+                </h4>
+
+                <p>
+                    Completed secondary-level education from
+                    Adarsh English Boarding Secondary School,
+                    Semari.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- =================================================
+             RESEARCH
+        ================================================== -->
+
+        <section class="research" id="research">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Academic Work
+                    </div>
+
+                    <h2>
+                        Research & Publications
+                    </h2>
+
+                    <p>
+                        A professional space for your thesis,
+                        research projects and publications.
+                    </p>
+
+                </div>
+
+
+                <!-- Featured Research -->
+
+                <div class="featured-research">
+
+                    <span class="research-tag">
+                        Featured Research
+                    </span>
+
+
+                    <h3>
+                        Determinants of Technical Efficiency
+                        among Vegetable Farmers in Sarlahi District
+                    </h3>
+
+
+                    <p>
+
+                        This section can contain your thesis
+                        abstract, research objectives,
+                        methodology, findings and conclusions.
+
+                    </p>
+
+
+                    <div class="research-meta">
+
+                        <span>
+                            📍 Sarlahi, Nepal
+                        </span>
+
+                        <span>
+                            📊 Stochastic Frontier Analysis
+                        </span>
+
+                        <span>
+                            🌱 Vegetable Production
+                        </span>
+
+                        <span>
+                            🎓 B.Sc. Agriculture
+                        </span>
+
+                    </div>
+
+
+                    <a href="#"
+                       class="btn">
+                        View Research
+                    </a>
+
+                </div>
+
+
+                <!-- Research Cards -->
+
+                <div class="cards">
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            R
+                        </div>
+
+                        <h3>
+                            Research Project
+                        </h3>
+
+                        <p>
+                            Add another research project,
+                            paper or academic study here.
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            View Project →
+                        </a>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            P
+                        </div>
+
+                        <h3>
+                            Publication
+                        </h3>
+
+                        <p>
+                            Add journal articles, conference
+                            papers or publications here.
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            Read Publication →
+                        </a>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            D
+                        </div>
+
+                        <h3>
+                            Data & Analysis
+                        </h3>
+
+                        <p>
+                            Add your work involving agricultural
+                            statistics, econometrics and data.
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            Learn More →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        What I Have Worked On
+                    </div>
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        Add academic, agricultural, technology
+                        and personal projects.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <div class="card project-card">
+
+                        <div class="project-image">
+                            PROJECT IMAGE
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Agricultural Research
+                            </h3>
+
+                            <p>
+                                Add details about your research
+                                project here.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                View Project →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card project-card">
+
+                        <div class="project-image">
+                            PROJECT IMAGE
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Agriculture Technology
+                            </h3>
+
+                            <p>
+                                Add information about your
+                                technology or innovation project.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                View Project →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card project-card">
+
+                        <div class="project-image">
+                            PROJECT IMAGE
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Field Project
+                            </h3>
+
+                            <p>
+                                Add information about your
+                                fieldwork or agricultural project.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                View Project →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
+
+        <section class="skills" id="skills">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Expertise
+                    </div>
+
+                    <h2>
+                        Skills & Knowledge
+                    </h2>
+
+                    <p>
+                        Replace these with your actual skills.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Agriculture & Research
+                        </h3>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    Agricultural Research
+                                </span>
+
+                                <span>
+                                    90%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:90%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    Field Survey
+                                </span>
+
+                                <span>
+                                    85%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:85%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    Data Analysis
+                                </span>
+
+                                <span>
+                                    80%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:80%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-box">
+
+                        <h3>
+                            Technology & Other Skills
+                        </h3>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    Microsoft Office
+                                </span>
+
+                                <span>
+                                    90%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:90%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    HTML / CSS
+                                </span>
+
+                                <span>
+                                    70%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:70%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill">
+
+                            <div class="skill-top">
+
+                                <span>
+                                    Communication
+                                </span>
+
+                                <span>
+                                    85%
+                                </span>
+
+                            </div>
+
+                            <div class="skill-bar">
+
+                                <div class="skill-progress"
+                                     style="width:85%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BLOG
+        ================================================== -->
+
+        <section id="blog">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Articles & Ideas
+                    </div>
+
+                    <h2>
+                        Latest From My Blog
+                    </h2>
+
+                    <p>
+                        Your future articles will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <article class="card blog-card">
+
+                        <div class="blog-image">
+                            BLOG IMAGE
+                        </div>
+
+                        <div class="blog-content">
+
+                            <span class="blog-date">
+                                Agriculture • 2026
+                            </span>
+
+                            <h3>
+                                Your First Blog Article
+                            </h3>
+
+                            <p>
+                                Add a short introduction to
+                                your article here.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card blog-card">
+
+                        <div class="blog-image">
+                            BLOG IMAGE
+                        </div>
+
+                        <div class="blog-content">
+
+                            <span class="blog-date">
+                                Research • 2026
+                            </span>
+
+                            <h3>
+                                Agricultural Research & Innovation
+                            </h3>
+
+                            <p>
+                                Add your article description here.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card blog-card">
+
+                        <div class="blog-image">
+                            BLOG IMAGE
+                        </div>
+
+                        <div class="blog-content">
+
+                            <span class="blog-date">
+                                Technology • 2026
+                            </span>
+
+                            <h3>
+                                Technology in Agriculture
+                            </h3>
+
+                            <p>
+                                Add your article description here.
+                            </p>
+
+                            <a href="#"
+                               class="text-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACHIEVEMENTS
+        ================================================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Milestones
+                    </div>
+
+                    <h2>
+                        Achievements
+                    </h2>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <div class="card achievement">
+
+                        <div class="achievement-number">
+                            01
+                        </div>
+
+                        <h3>
+                            B.Sc. Agriculture
+                        </h3>
+
+                        <p>
+                            Add your achievement details.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card achievement">
+
+                        <div class="achievement-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Research
+                        </h3>
+
+                        <p>
+                            Add your research achievements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card achievement">
+
+                        <div class="achievement-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Awards & Recognition
+                        </h3>
+
+                        <p>
+                            Add awards and recognitions.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATIONS
+        ================================================== -->
+
+        <section class="research">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Professional Development
+                    </div>
+
+                    <h2>
+                        Certifications
+                    </h2>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            C1
+                        </div>
+
+                        <h3>
+                            Certification Name
+                        </h3>
+
+                        <p>
+                            Issued by: [Organization]<br>
+                            Year: [Year]
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            View Certificate →
+                        </a>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            C2
+                        </div>
+
+                        <h3>
+                            Certification Name
+                        </h3>
+
+                        <p>
+                            Issued by: [Organization]<br>
+                            Year: [Year]
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            View Certificate →
+                        </a>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            C3
+                        </div>
+
+                        <h3>
+                            Certification Name
+                        </h3>
+
+                        <p>
+                            Issued by: [Organization]<br>
+                            Year: [Year]
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            View Certificate →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GALLERY
+        ================================================== -->
+
+        <section class="gallery" id="gallery">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Visual Journey
+                    </div>
+
+                    <h2>
+                        Gallery
+                    </h2>
+
+                    <p>
+                        Add your university, agriculture,
+                        research, fieldwork and travel photos.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <div class="gallery-item">
+                        PHOTO 01
+                    </div>
+
+                    <div class="gallery-item">
+                        PHOTO 02
+                    </div>
+
+                    <div class="gallery-item">
+                        PHOTO 03
+                    </div>
+
+                    <div class="gallery-item">
+                        PHOTO 04
+                    </div>
+
+                    <div class="gallery-item">
+                        PHOTO 05
+                    </div>
+
+                    <div class="gallery-item">
+                        PHOTO 06
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CV
+        ================================================== -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="cv-box">
+
+                    <div>
+
+                        <h2>
+                            Want to know more about me?
+                        </h2>
+
+                        <p>
+                            Download my CV to explore my
+                            education, research, experience,
+                            skills and achievements.
+                        </p>
+
+                    </div>
+
+
+                    <!--
+                    Later place your CV at:
+
+                    documents/cv.pdf
+
+                    Then change href to:
+                    href="documents/cv.pdf"
+                    -->
+
+                    <a href="#"
+                       class="btn">
+                        Download CV ↓
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="small-title">
+                        Let's Connect
+                    </div>
+
+                    <h2>
+                        Get In Touch
+                    </h2>
+
+                    <p>
+                        For research, collaboration,
+                        professional opportunities or
+                        general enquiries.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <div class="contact-info">
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                @
+                            </div>
+
+                            <div>
+
+                                <small>Email</small>
+
+                                <strong>
+                                    [your@email.com]
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <small>Phone</small>
+
+                                <strong>
+                                    [+977-XXXXXXXXXX]
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ●
+                            </div>
+
+                            <div>
+
+                                <small>Location</small>
+
+                                <strong>
+                                    Nepal
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ↗
+                            </div>
+
+                            <div>
+
+                                <small>Availability</small>
+
+                                <strong>
+                                    Open to collaboration
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!--
+                    IMPORTANT:
+                    This form is currently visual only.
+
+                    Later we can connect it to:
+                    Formspree / EmailJS / your own backend.
+                    -->
+
+                    <form class="contact-form"
+                          id="contactForm">
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Your Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="What would you like to discuss?"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Message
+                            </label>
+
+                            <textarea
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn">
+
+                            Send Message →
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div>
+
+                    <div class="footer-logo">
+                        Amrish<span>.</span>
+                    </div>
+
+                    <p>
+                        Agriculture • Research • Innovation
+                    </p>
+
+                    <p style="margin-top:10px;">
+                        Building knowledge, exploring ideas
+                        and contributing to a better future
+                        through agriculture.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Quick Links
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#education">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#research">
+                                Research
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#projects">
+                                Projects
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#blog">
+                                Blog
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#gallery">
+                                Gallery
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="year"></span>
+                    Amrish Yadav.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    Designed & Developed by Amrish Yadav
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button id="top-btn"
+            title="Back to top">
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        /* Close menu after clicking */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+
+        themeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                themeBtn.textContent = "☀";
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+            } else {
+
+                themeBtn.textContent = "☾";
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+            }
+
+        });
+
+
+        /* Remember theme */
+
+        if (
+            localStorage.getItem("theme")
+            === "dark"
+        ) {
+
+            document.body.classList.add("dark");
+
+            themeBtn.textContent = "☀";
+
+        }
+
+
+        /* =====================================================
+           SCROLL PROGRESS
+        ====================================================== */
+
+        window.addEventListener("scroll", function () {
+
+            const scrollTop =
+                window.scrollY;
+
+            const documentHeight =
+                document.documentElement.scrollHeight
+                - document.documentElement.clientHeight;
+
+            const progress =
+                (scrollTop / documentHeight) * 100;
+
+            document.getElementById(
+                "progress-bar"
+            ).style.width =
+                progress + "%";
+
+        });
+
+
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+        const topBtn =
+            document.getElementById("top-btn");
+
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 500) {
+
+                topBtn.classList.add("show");
+
+            } else {
+
+                topBtn.classList.remove("show");
+
+            }
+
+        });
+
+
+        topBtn.addEventListener("click", function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+
+        /* =====================================================
+           CONTACT FORM
+        ====================================================== */
+
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Thank you! The contact form will be connected to email in the next step."
+                );
+
+                this.reset();
+
+            });
+
+
+        /* =====================================================
+           AUTOMATIC YEAR
+        ====================================================== */
+
+        document.getElementById("year")
+            .textContent =
+            new Date().getFullYear();
+
+
+    </script>
+
 </body>
 </html>
