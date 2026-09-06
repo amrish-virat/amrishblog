@@ -1876,7 +1876,106 @@
                 text-align: center;
             }
         }
+/* =====================================================
+   BLOG ARTICLE VIEWER
+====================================================== */
 
+.article-viewer {
+
+    display: none;
+
+    padding: 130px 0 80px;
+
+    background: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+.article-viewer.active {
+
+    display: block;
+}
+
+
+.article-page {
+
+    max-width: 850px;
+
+    margin: 45px auto 0;
+
+    background: #ffffff;
+}
+
+
+.article-page h1 {
+
+    font-size: clamp(32px, 5vw, 52px);
+
+    line-height: 1.15;
+
+    margin: 15px 0 30px;
+
+    color: var(--dark);
+}
+
+
+#article-content {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #444;
+
+}
+
+
+#article-content img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 30px auto;
+
+    border-radius: 10px;
+}
+
+
+#article-content p {
+
+    margin-bottom: 22px;
+}
+
+
+#article-content h2,
+#article-content h3 {
+
+    margin-top: 35px;
+
+    margin-bottom: 15px;
+
+    color: var(--dark);
+}
+
+
+#article-content a {
+
+    color: var(--primary);
+
+    text-decoration: underline;
+}
+
+
+#close-article {
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
     </style>
 
 </head>
@@ -2814,125 +2913,61 @@
 
         <section id="blog">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="section-heading">
+        <div class="section-heading">
 
-                    <div class="small-title">
-                        Articles & Ideas
-                    </div>
-
-                    <h2>
-                        Latest From My Blog
-                    </h2>
-
-                    <p>
-                        Your future articles will appear here.
-                    </p>
-
-                </div>
-
-
-                <div class="cards">
-
-
-                    <article class="card blog-card">
-
-                        <div class="blog-image">
-                            BLOG IMAGE
-                        </div>
-
-                        <div class="blog-content">
-
-                            <span class="blog-date">
-                                Agriculture • 2026
-                            </span>
-
-                            <h3>
-                                Your First Blog Article
-                            </h3>
-
-                            <p>
-                                Add a short introduction to
-                                your article here.
-                            </p>
-
-                            <a href="#"
-                               class="text-link">
-                                Read Article →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="card blog-card">
-
-                        <div class="blog-image">
-                            BLOG IMAGE
-                        </div>
-
-                        <div class="blog-content">
-
-                            <span class="blog-date">
-                                Research • 2026
-                            </span>
-
-                            <h3>
-                                Agricultural Research & Innovation
-                            </h3>
-
-                            <p>
-                                Add your article description here.
-                            </p>
-
-                            <a href="#"
-                               class="text-link">
-                                Read Article →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="card blog-card">
-
-                        <div class="blog-image">
-                            BLOG IMAGE
-                        </div>
-
-                        <div class="blog-content">
-
-                            <span class="blog-date">
-                                Technology • 2026
-                            </span>
-
-                            <h3>
-                                Technology in Agriculture
-                            </h3>
-
-                            <p>
-                                Add your article description here.
-                            </p>
-
-                            <a href="#"
-                               class="text-link">
-                                Read Article →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
+            <div class="small-title">
+                Articles & Ideas
             </div>
 
-        </section>
+            <h2>
+                Latest From My Blog
+            </h2>
 
+            <p>
+                Latest articles, ideas and updates from my blog.
+            </p>
+
+        </div>
+
+        <!-- Blogger posts will appear here -->
+        <div class="cards" id="blog-posts">
+
+            <div class="card blog-card">
+                <div class="blog-image">
+                    Loading articles...
+                </div>
+
+                <div class="blog-content">
+                    <h3>
+                        Loading latest posts
+                    </h3>
+
+                    <p>
+                        Please wait while the latest articles are loaded.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:35px;">
+
+            <a href="https://updateswithamrish.blogspot.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline">
+
+                View All Articles →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- =================================================
              ACHIEVEMENTS
@@ -3740,6 +3775,284 @@
 
 
     </script>
+<!-- =====================================================
+     BLOG ARTICLE VIEWER
+====================================================== -->
 
+<div id="article-viewer" class="article-viewer">
+
+    <div class="container">
+
+        <button
+            id="close-article"
+            class="btn btn-outline"
+            type="button">
+
+            ← Back to Articles
+
+        </button>
+
+        <article class="article-page">
+
+            <div id="article-date" class="blog-date"></div>
+
+            <h1 id="article-title">
+                Loading article...
+            </h1>
+
+            <div id="article-content">
+                Please wait...
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+<script>
+/* =====================================================
+   BLOGGER ARTICLE INTEGRATION
+===================================================== */
+
+const bloggerFeed =
+    "https://updateswithamrish.blogspot.com/feeds/posts/default";
+
+const blogPosts = document.getElementById("blog-posts");
+const articleViewer = document.getElementById("article-viewer");
+const articleTitle = document.getElementById("article-title");
+const articleDate = document.getElementById("article-date");
+const articleContent = document.getElementById("article-content");
+const closeArticle = document.getElementById("close-article");
+
+
+/* Load Blogger posts */
+
+function loadBloggerPosts() {
+
+    const script = document.createElement("script");
+
+    script.src =
+        bloggerFeed +
+        "?alt=json-in-script&max-results=12&callback=showBloggerPosts";
+
+    document.body.appendChild(script);
+}
+
+
+/* Display posts */
+
+function showBloggerPosts(data) {
+
+    if (!data.feed || !data.feed.entry) {
+
+        blogPosts.innerHTML = `
+            <div class="card blog-card">
+                <div class="blog-content">
+                    <h3>No articles found</h3>
+                    <p>
+                        New articles will appear here soon.
+                    </p>
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    blogPosts.innerHTML = "";
+
+
+    data.feed.entry.forEach((post, index) => {
+
+        const title =
+            post.title?.$t || "Untitled Article";
+
+
+        const content =
+            post.content?.$t ||
+            post.summary?.$t ||
+            "";
+
+
+        const published =
+            post.published?.$t || "";
+
+
+        const date = published
+            ? new Date(published).toLocaleDateString(
+                "en-US",
+                {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            )
+            : "";
+
+
+        /* Find first image */
+
+        let image =
+            "https://via.placeholder.com/800x450?text=Amrish+Yadav";
+
+
+        const imageMatch =
+            content.match(/<img[^>]+src=["']([^"']+)["']/i);
+
+
+        if (imageMatch) {
+            image = imageMatch[1];
+        }
+
+
+        /* Create article card */
+
+        const card = document.createElement("article");
+
+        card.className =
+            "card blog-card";
+
+
+        card.innerHTML = `
+
+            <div class="blog-image"
+                 style="
+                    background-image:url('${image}');
+                    background-size:cover;
+                    background-position:center;
+                 ">
+            </div>
+
+            <div class="blog-content">
+
+                <span class="blog-date">
+                    ${date}
+                </span>
+
+                <h3>
+                    ${title}
+                </h3>
+
+                <p>
+                    ${getExcerpt(content)}
+                </p>
+
+                <a href="#"
+                   class="text-link"
+                   data-post-index="${index}">
+
+                    Read Article →
+
+                </a>
+
+            </div>
+
+        `;
+
+
+        blogPosts.appendChild(card);
+
+
+        /* Save complete article */
+
+        card.querySelector(".text-link")
+            .addEventListener("click", function(event) {
+
+                event.preventDefault();
+
+                openArticle(
+                    title,
+                    date,
+                    content
+                );
+
+            });
+
+    });
+
+}
+
+
+/* Create short description */
+
+function getExcerpt(html) {
+
+    const temp =
+        document.createElement("div");
+
+    temp.innerHTML = html;
+
+
+    let text =
+        temp.textContent ||
+        temp.innerText ||
+        "";
+
+
+    text =
+        text.replace(/\s+/g, " ").trim();
+
+
+    if (text.length > 160) {
+
+        text =
+            text.substring(0, 160) + "...";
+
+    }
+
+
+    return text;
+}
+
+
+/* Open complete article */
+
+function openArticle(title, date, content) {
+
+    articleTitle.textContent =
+        title;
+
+    articleDate.textContent =
+        date;
+
+    articleContent.innerHTML =
+        content;
+
+
+    articleViewer.classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* Close article */
+
+closeArticle.addEventListener(
+    "click",
+    function() {
+
+        articleViewer.classList.remove("active");
+
+        document
+            .getElementById("blog")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+);
+
+
+/* Start */
+
+loadBloggerPosts();
+
+</script>
 </body>
 </html>
